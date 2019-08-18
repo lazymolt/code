@@ -10,6 +10,7 @@ public class CodeApplication {
 		System.out.println("11111");
 		System.out.println("master");
 		System.out.println("hotfix branch code change");
+		System.out.println("push?");
 		SpringApplication.run(CodeApplication.class, args);
 	}
 }
