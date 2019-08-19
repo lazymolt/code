@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 //@Getter @Setter @EqualsAndHashCode(of ="id")
 //@Entity
 public class Event {
-
+// local mod dto
 //    @Id
 //    @GeneratedValue
     private Integer id;
