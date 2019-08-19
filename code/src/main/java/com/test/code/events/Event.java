@@ -2,15 +2,26 @@ package com.test.code.events;
 
 import java.time.LocalDateTime;
 
-//@Builder @AllArgsConstructor @NoArgsConstructor
-//@Getter @Setter @EqualsAndHashCode(of ="id")
-//@Entity
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Builder @AllArgsConstructor @NoArgsConstructor
+@Getter @Setter @EqualsAndHashCode(of ="id")
+@Entity
 public class Event {
-// local mod dto
-// modify Dto
-// rulolololo
-//    @Id
-//    @GeneratedValue
+
+    @Id
+    @GeneratedValue
     private Integer id;
     private String name;
     private String description;
@@ -24,8 +35,8 @@ public class Event {
     private int limitOfEnrollment;
     private boolean offline;
     private boolean free;
-//    @Enumerated(EnumType.STRING) @Builder.Default
-//    private EventStatus eventStatus = EventStatus.DRAFT;
+    @Enumerated(EnumType.STRING) @Builder.Default
+    private EventStatus eventStatus = EventStatus.DRAFT;
 
     public void update() {
         if(this.basePrice ==0 && this.maxPrice == 0) {
