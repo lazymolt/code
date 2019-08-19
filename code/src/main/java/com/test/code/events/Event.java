@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 //@Entity
 public class Event {
 // local mod dto
+// modify Dto
 //    @Id
 //    @GeneratedValue
     private Integer id;
